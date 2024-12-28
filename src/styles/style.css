@@ -1,21 +1,119 @@
-/* Add your CSS styles here */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background: url('background.webp') no-repeat center center fixed; /* Add a background image */
+    background-size: cover;
+    color: #333;
+    margin: 0;
+    padding: 0;
 }
 
 header {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 2em;
     text-align: center;
-    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    margin: 1em;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+header p {
+    margin: 0.5em 0 0;
+    font-size: 1.2em;
+}
+
+main {
+    padding: 2em;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
 }
 
 #music-gallery {
+    margin-top: 2em;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em; /* Increased gap between album boxes */
+    justify-content: center;
+}
+
+.album-box {
+    width: 200px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: column;
     align-items: center;
+    cursor: pointer;
+    transition: transform 0.2s;
+    overflow: hidden; /* Ensure content fits within the box */
+    backdrop-filter: blur(10px);
+}
+
+.album-box img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px 10px 0 0;
+}
+
+.album-box h3 {
+    margin: 0.5em 0;
+    font-size: 1.2em;
+    text-align: center;
+    padding: 0 0.5em; /* Add padding to prevent text from touching the edges */
+    overflow: hidden; /* Ensure text fits within the box */
+    text-overflow: ellipsis; /* Add ellipsis for overflow text */
+    white-space: normal; /* Allow text to wrap */
+    color: #333; /* Ensure text is readable */
+}
+
+.album-box:hover {
+    transform: scale(1.05);
 }
 
 .album {
-    margin-bottom: 20px;
+    margin-top: 2em;
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 1em;
+}
+
+.album h3 {
+    font-size: 2em;
+    margin-bottom: 1em;
+    text-align: center;
+    color: #333; /* Ensure text is readable */
+}
+
+.album button {
+    display: block;
+    margin: 0 auto 1em;
+    padding: 0.5em 1em;
+    font-size: 1em;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #333; /* Ensure text is readable */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    cursor: pointer;
+    backdrop-filter: blur(10px);
+}
+
+.album button:hover {
+    background-color: rgba(255, 255, 255, 0.4);
 }
 
 .music-list {
@@ -24,5 +122,23 @@ header {
 }
 
 .music-list li {
-    margin-bottom: 10px;
+    margin: 1em 0;
+    padding: 1em;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    backdrop-filter: blur(10px);
+}
+
+.music-list li audio {
+    margin-left: 1em;
+    flex-grow: 1;
+}
+
+.music-list li:hover {
+    background-color: rgba(255, 255, 255, 0.4);
 }
