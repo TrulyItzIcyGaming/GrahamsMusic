@@ -1,0 +1,20 @@
+{
+  "name": "music-storage-site",
+  "version": "1.0.0",
+  "description": "A web application to store and display music for users.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "keywords": [
+    "music",
+    "storage",
+    "web",
+    "application"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
+}
